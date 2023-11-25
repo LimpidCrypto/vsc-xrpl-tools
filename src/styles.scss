@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(11 37 73);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    * {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+}

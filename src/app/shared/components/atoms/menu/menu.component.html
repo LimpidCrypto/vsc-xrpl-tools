@@ -1,0 +1,11 @@
+<div *ngIf="compact" class="menu-atom__compact">
+    <button-atom [disabled]="isMenuBtnDisabled">
+        <ng-content select="standardText"></ng-content>
+    </button-atom>
+    <toggable-atom #menuList [isVisible]="isMenuListVisible">
+        <ng-content select="menuItems"></ng-content>
+    </toggable-atom>
+</div>
+<div *ngIf="!compact" class="menu-atom__bar">
+    <ng-content select="menuItems"></ng-content>
+</div>

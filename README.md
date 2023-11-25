@@ -1,2 +1,8 @@
-# vsc-xrpl-tools
-A VSCode extension for the XRPL
+# XRPL Tools
+
+## Development
+
+```
+$ npm install
+$ npm run build
+```
