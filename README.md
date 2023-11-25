@@ -1,8 +1,3 @@
 # XRPL Tools
 
-## Development
-
-```
-$ npm install
-$ npm run build
-```
+A VS Code extension providing tools to develop on the XRPL.
