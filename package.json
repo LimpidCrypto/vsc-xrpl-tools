@@ -1,12 +1,15 @@
 {
   "name": "xrpl-tools",
   "description": "A vscode extension providing tools to develop on the XRP Ledger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.84.2"
   },
+  "categories": [
+    "Other"
+  ],
   "main": "./dist/ext-src/extension.js",
-  "publisher": "limpidcrypto",
+  "publisher": "LimpidCrypto",
   "contributes": {
     "viewsContainers": {
       "activitybar": [

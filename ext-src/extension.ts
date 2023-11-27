@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { WalletPanel } from "./panels/walletPanel";
 import { TreeDataProvider } from './treeDataProvider';
+import { generateFaucetWallet } from './app/wallet';
 
 export function activate(context: vscode.ExtensionContext) {
 	const treeDataProvider = new TreeDataProvider();
@@ -15,8 +16,14 @@ export function activate(context: vscode.ExtensionContext) {
 	let openWalletCommand = vscode.commands.registerCommand('xrpl-tools.openWalletView', () => {
 		new WalletPanel(context.extensionUri);
 	});
+	let generateFaucetWalletCommand = vscode.commands.registerCommand('xrpl-tools.generateFaucetWallet', async () => {
+        vscode.window.showInformationMessage("Generating wallet...");
+        const faucetWallet = await generateFaucetWallet();
+        vscode.window.showInformationMessage(`Address: ${faucetWallet.wallet.classicAddress}\nSecret: ${faucetWallet.wallet.seed ?? faucetWallet.wallet.privateKey}\nFunded with: ${faucetWallet.balance}`);
+	});
 
 	context.subscriptions.push(openWalletCommand);
+	context.subscriptions.push(generateFaucetWalletCommand);
 }
 
 export function deactivate() { }
