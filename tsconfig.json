@@ -1,28 +1,13 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "dist",
+    "lib": ["es6", "dom"],
     "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "module": "ES2022",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
-    "useDefineForClassFields": false
+    "rootDir": "src",
+    "strict": true,
+    "types": ["node", "minimatch"]
   },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+  "exclude": ["node_modules", ".vscode-test", "webview-ui"]
 }
