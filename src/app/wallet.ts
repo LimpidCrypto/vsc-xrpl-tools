@@ -1,9 +1,10 @@
-import { window } from "vscode";
+import * as vscode from 'vscode';
 import XrplClient from "./client";
 import { FaucetUri, FaucetWallet } from "../messages/types";
 
 export async function generateFaucetWallet(): Promise<FaucetWallet> {
-    const faucetWallet = await XrplClient.fundWallet(FaucetUri.Testnet);
+        vscode.window.showInformationMessage("Generating wallet...");
+        const faucetWallet = await XrplClient.fundWallet(FaucetUri.Testnet);
 
     if (faucetWallet) {
         return faucetWallet;
