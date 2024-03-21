@@ -1,7 +1,8 @@
 import { Wallet } from "xrpl";
 
 export type Commands = "GenerateFaucetWallet";
-export type FaucetWallet = { wallet: Wallet, balance: number }
+export type Trace = { hash: string, code: string }
+export type FaucetWallet = { wallet: Wallet, balance: number, amount?: number, trace?: Trace }
 
 export enum FaucetUri {
     Testnet = 'wss://s.altnet.rippletest.net:51233/',
