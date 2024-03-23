@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { vscode } from 'src/app/utils/vscode';
-import { FaucetWallet } from '../../../../../../../src/messages/types';
+import { LcFaucetWallet } from 'xrpl-tools/src/types/lcDocumentationTypes';
 
 @Component({
   selector: 'faucet-wallet-button-organism',
@@ -17,14 +17,14 @@ export class FaucetWalletButtonComponent {
   // Handle messages from the backend
   handleBackendMessage(message: any) {
     if (message.command === 'GenerateFaucetWallet') {
-      const faucetWallet: FaucetWallet = message.faucetWallet;
+      const faucetWallet: LcFaucetWallet = message.faucetWallet;
       // Do something with the faucetWallet data in your frontend code
       const addressInput = document.getElementById('address-input') as HTMLInputElement;
       const secretInput = document.getElementById('secret-input') as HTMLInputElement;
       const balanceInput = document.getElementById('balance-input') as HTMLInputElement;
-      addressInput.value = faucetWallet.wallet.classicAddress;
-      secretInput.value = faucetWallet.wallet.seed ?? faucetWallet.wallet.privateKey;
-      balanceInput.value = faucetWallet.balance.toString();
+      addressInput.value = faucetWallet.account.classicAddress;
+      secretInput.value = faucetWallet.account.secret ?? 'No secret provided';
+      balanceInput.value = faucetWallet.amount.toString();
     }
   }
 

@@ -92,5 +92,8 @@
       }
     }
   },
-  "defaultProject": "webview-ui"
+  "defaultProject": "webview-ui",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -21,6 +21,7 @@
     "@types/vscode-webview": "^1.57.4",
     "rxjs": "^7.8.1",
     "tslib": "^2.6.2",
+    "xrpl-tools": "file:..",
     "zone.js": "^0.14.2"
   },
   "devDependencies": {

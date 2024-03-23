@@ -1,14 +1,14 @@
 import * as vscode from 'vscode';
 import { LcHttpClient } from '../clients/httpClient';
-import { LcRes } from '../types/lcDocumentationTypes';
+import { LcFaucetWallet } from '../types/lcDocumentationTypes';
 
-export async function generateFaucetWallet(): Promise<Pick<LcRes, 'Faucet'>> {
+export async function generateFaucetWallet(): Promise<LcFaucetWallet> {
     vscode.window.showInformationMessage("Generating wallet...");
-    const client = new LcHttpClient("https://xrp.limpidcrypto.com/api/v1/Test");
+    const client = new LcHttpClient("Test", "v1");
     const faucetWalletResponse = await client.get("/wallet/faucet");
 
     if (faucetWalletResponse.success) {
-        return faucetWalletResponse.result as Pick<LcRes, 'Faucet'>;
+        return faucetWalletResponse.result as LcFaucetWallet;
     } else {
         throw new Error(faucetWalletResponse.error);
     }

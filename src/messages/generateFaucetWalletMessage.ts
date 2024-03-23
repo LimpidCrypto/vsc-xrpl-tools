@@ -1,7 +1,7 @@
+import { LcFaucetWallet } from "../types/lcDocumentationTypes";
 import { BaseMessage } from "./baseMessage";
-import { FaucetWallet } from "./types";
 
 export type GenerateFaucetWalletMessage = BaseMessage & {
     command: 'GenerateFaucetWallet';
-    faucetWallet?: FaucetWallet;
+    faucetWallet?: LcFaucetWallet;
 };

@@ -22,7 +22,7 @@ export interface components {
       error?: string;
     };
     Account: {
-      classic_address: string;
+      classicAddress: string;
       address?: string;
       xaddress?: string;
       secret?: string;
