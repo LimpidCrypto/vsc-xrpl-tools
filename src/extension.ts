@@ -18,8 +18,9 @@ export function activate(context: vscode.ExtensionContext) {
 		new WalletPanel(context.extensionUri);
 	});
 	let generateFaucetWalletCommand = vscode.commands.registerCommand('xrpl-tools.generateFaucetWallet', async () => {
-        const faucetWallet: LcFaucetWallet = await generateFaucetWallet();
-        vscode.window.showInformationMessage(`Address: ${faucetWallet.account.classicAddress}\nSecret: ${faucetWallet.account.secret}\nFunded with: ${faucetWallet.amount}`);
+		const faucetWallet: LcFaucetWallet = await generateFaucetWallet('Test');
+
+		vscode.window.showInformationMessage(`Address: ${faucetWallet.account.classicAddress}\nSecret: ${faucetWallet.account.secret}\nFunded with: ${faucetWallet.amount}`);
 	});
 
 	context.subscriptions.push(openWalletCommand);

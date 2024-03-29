@@ -2,7 +2,6 @@ import axios, { AxiosResponse } from "axios";
 import { LcResult } from "../types/response";
 import { LcPaths, LcResponse, LcError, LcRes } from "../types/lcDocumentationTypes";
 import { Network } from "../types/network";
-import { Agent } from "https";
 
 export class LcHttpClient {
     constructor(private network: Network, private version: string) { }

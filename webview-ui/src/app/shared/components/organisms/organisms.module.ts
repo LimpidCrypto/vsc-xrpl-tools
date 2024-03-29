@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { MoleculesModule } from '../molecules/molecules.module';
 import { CoreModule } from './core/core.module';
 import { AtomsModule } from '../atoms/atoms.module';
-import { FaucetWalletButtonComponent } from './faucet-wallet-button/faucet-wallet-button.component';
+import { WalletTileComponent } from './wallet-tile/wallet-tile.component';
 
 
 
 @NgModule({
   declarations: [
-    FaucetWalletButtonComponent
+    WalletTileComponent,
   ],
   imports: [
     CommonModule,
@@ -19,7 +19,7 @@ import { FaucetWalletButtonComponent } from './faucet-wallet-button/faucet-walle
   ],
   exports: [
     CoreModule,
-    FaucetWalletButtonComponent,
+    WalletTileComponent,
   ]
 })
 export class OrganismsModule { }

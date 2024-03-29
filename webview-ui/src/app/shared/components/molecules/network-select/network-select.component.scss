@@ -1,0 +1,16 @@
+.network-select-molecule {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+
+  option {
+    @apply text-dark-blue;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+  }
+}

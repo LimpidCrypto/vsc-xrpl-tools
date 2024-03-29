@@ -1,0 +1,22 @@
+<tile-molecule class="wallet-tile-organism">
+    <div tile-content>
+      <div id="wallet-tile-organism__control">
+        <network-select-molecule #networkSelect></network-select-molecule>
+        <generate-faucet-button-molecule [network]="networkSelect.selectedNetwork"></generate-faucet-button-molecule>
+      </div>
+      <div id="wallet-tile-organism__data">
+          <div>
+            <label for="address-input">Address: </label>
+            <p id="address-input">{{address}}</p>
+          </div>
+          <div>
+            <label for="secret-input">Secret: </label>
+            <p id="secret-input">{{secret}}</p>
+          </div>
+          <div>
+            <label for="amount-input">Funded with: </label>
+            <p id="amount-input">{{amount}}</p>
+          </div>
+      </div>
+    </div>
+</tile-molecule>

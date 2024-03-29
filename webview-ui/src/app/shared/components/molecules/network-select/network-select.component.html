@@ -1,0 +1,3 @@
+<select #networkSelect class="network-select-molecule" (change)="onNetworkSelected(networkSelect.value)">
+  <option *ngFor="let network of networks" [value]="network">{{network}}</option>
+</select>

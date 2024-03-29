@@ -1,18 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-html,
+* {
+  @apply text-white;
+}
+
+html {
+  @apply bg-dark-blue;
+  @apply text-white;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(11 37 73);
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+  @apply flex flex-col min-h-screen;
+  @apply bg-dark-blue;
+}
 
-    * {
-        font-size: 1rem;
-    }
+h1 {
+  @apply text-xl;
+  @apply sm:text-3xl;
+  @apply md:text-5xl;
+  @apply lg:text-7xl;
+}
 
-    h1 {
-        font-size: 1rem;
-    }
+h2 {
+  @apply text-lg;
+  @apply sm:text-2xl;
+  @apply md:text-4xl;
+  @apply lg:text-6xl;
+}
+
+h3 {
+  @apply text-base;
+  @apply sm:text-xl;
+  @apply md:text-3xl;
+  @apply lg:text-5xl;
+}
+
+h4 {
+  @apply text-sm;
+  @apply sm:text-lg;
+  @apply md:text-2xl;
+  @apply lg:text-4xl;
+}
+
+h5 {
+  @apply text-xs;
+  @apply sm:text-base;
+  @apply md:text-xl;
+  @apply lg:text-3xl;
+}
+
+p {
+  @apply text-xs;
+  @apply sm:text-base;
+  @apply md:text-lg;
+}
+
+label {
+  @apply text-2xs;
+  @apply sm:text-sm;
+  @apply md:text-base;
+}
+
+span {
+  @apply text-xs;
+  @apply sm:text-base;
+  @apply md:text-lg;
 }

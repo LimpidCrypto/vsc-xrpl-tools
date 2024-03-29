@@ -10,6 +10,7 @@ import { Rotate180Component } from './rotate180/rotate180.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { ToggableComponent } from './toggable/toggable.component';
+import { TileComponent } from './tile/tile.component';
 
 
 
@@ -26,6 +27,7 @@ import { ToggableComponent } from './toggable/toggable.component';
     MenuItemComponent,
     MenuComponent,
     ToggableComponent,
+    TileComponent,
   ],
   exports: [
     CircleComponent,
@@ -39,6 +41,7 @@ import { ToggableComponent } from './toggable/toggable.component';
     MenuItemComponent,
     MenuComponent,
     ToggableComponent,
+    TileComponent,
   ]
 })
 export class AtomsModule { }

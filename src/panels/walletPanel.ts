@@ -1,6 +1,6 @@
 import { Webview, window, Uri } from "vscode";
 import { BasePanel } from "./basePanel";
-import { GenerateFaucetWalletMessage } from "../messages/generateFaucetWalletMessage";
+import { RequestFaucetWallet, ResponseFaucetWallet } from "../messages/generateFaucetWalletMessage";
 import { generateFaucetWallet } from "../app/wallet";
 
 /**
@@ -13,16 +13,17 @@ export class WalletPanel extends BasePanel {
 
     override setWebviewMessageListener(webview: Webview) {
         webview.onDidReceiveMessage(
-            async (message: GenerateFaucetWalletMessage) => {
+            async (message: RequestFaucetWallet) => {
                 const command = message.command;
+                const network = message.network;
 
                 switch (command) {
-                    case "GenerateFaucetWallet":
-                        const faucetWallet = await generateFaucetWallet();
+                    case "RequestFaucetWallet":
+                        const faucetWallet = await generateFaucetWallet(network);
                         webview.postMessage({
-                            command: 'GenerateFaucetWallet',
+                            command: 'ResponseFaucetWallet',
                             faucetWallet: faucetWallet,
-                        } as GenerateFaucetWalletMessage);
+                        } as ResponseFaucetWallet);
                         break;
                 }
             },

@@ -1,1 +1,1 @@
-export type Commands = "GenerateFaucetWallet";
+export type Commands = "RequestFaucetWallet" | "ResponseFaucetWallet";
