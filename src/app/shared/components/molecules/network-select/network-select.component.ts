@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './network-select.component.scss'
 })
 export class NetworkSelectComponent {
-  networks: Network[] = ["Test", "Dev", "XahauTest", "SidechainTest"];
+  networks: Network[] = ["Test", "Dev", "XahauTest"];
 
   selectedNetwork: Network = 'Test';
 
