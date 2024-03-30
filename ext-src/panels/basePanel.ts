@@ -24,7 +24,7 @@ export class BasePanel {
             ViewColumn.One,
             {
                 enableScripts: true,
-                localResourceRoots: [Uri.joinPath(extensionUri, "dist"), Uri.joinPath(extensionUri, `webview-ui/dist`)],
+                localResourceRoots: [Uri.joinPath(extensionUri, "dist")],
             }
         );
 
@@ -46,11 +46,10 @@ export class BasePanel {
     }
 
     private _getWebviewContent(webview: Webview, extensionUri: Uri) {
-        const appDistPath = Uri.joinPath(extensionUri, 'webview-ui/dist');
+        const appDistPath = Uri.joinPath(extensionUri, 'dist/src');
         const baseUri = webview.asWebviewUri(appDistPath);
         const indexPath = Uri.joinPath(appDistPath, 'index.html');
         let indexHtml = fs.readFileSync(indexPath.fsPath, { encoding: 'utf8' });
-        log(baseUri);
         indexHtml = indexHtml.replace('<base href="/">', `<base href="${String(baseUri)}/">`);
 
         return indexHtml;

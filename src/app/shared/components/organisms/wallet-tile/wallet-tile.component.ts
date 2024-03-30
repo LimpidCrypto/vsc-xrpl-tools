@@ -1,8 +1,6 @@
-import { RequestFaucetWallet } from './../../../../../../../src/messages/generateFaucetWalletMessage';
 import { Component } from '@angular/core';
-import { vscode } from 'src/app/utils/vscode';
-import { LcFaucetWallet } from '../../../../../../../src/types/lcDocumentationTypes';
-import { Network } from '../../../../../../../src/types/network';
+import { LcFaucetWallet } from '../../../../../../ext-src/types/lcDocumentationTypes';
+import { Network } from '../../../../../../ext-src/types/network';
 
 @Component({
   selector: 'wallet-tile-organism',

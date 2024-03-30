@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { vscode } from 'src/app/utils/vscode';
-import { RequestFaucetWallet } from '../../../../../../../src/messages/generateFaucetWalletMessage';
+import { vscode } from '../../../../utils/vscode';
+import { RequestFaucetWallet } from '../../../../../../ext-src/messages/generateFaucetWalletMessage';
 
 @Component({
   selector: 'generate-faucet-button-molecule',

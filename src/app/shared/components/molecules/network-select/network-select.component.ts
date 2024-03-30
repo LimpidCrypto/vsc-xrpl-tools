@@ -1,4 +1,4 @@
-import { Network } from './../../../../../../../src/types/network';
+import { Network } from '../../../../../../ext-src/types/network';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
